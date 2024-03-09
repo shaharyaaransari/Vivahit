@@ -1,0 +1,40 @@
+.grid-container {
+  gap: 1.5rem;
+  width: 350px;
+  height: 350px;
+  padding: 2rem;
+  background-color: var(--darkgrey);
+  border-radius: 0.8rem;
+  border: 2px solid var(--darkgrey);
+}
+
+.info-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 1.5rem;
+}
+.coin-logo {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.coin-symol {
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.name-col{
+       display: flex;
+           flex-direction: column;
+}
+.coin-name {
+  color: var(--grey);
+  text-transform: uppercase;
+  font-weight:light;
+  font-size: 1rem;
+  margin: 0;
+}
