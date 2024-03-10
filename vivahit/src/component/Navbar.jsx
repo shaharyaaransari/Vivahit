@@ -46,8 +46,8 @@ const Navbar = () => {
               onChange={(e) => setCurrency(e.target.value)}
               sx={{ '& .MuiSelect-root': { color: 'white' } }} 
             >
-              <MenuItem value={"USD"}>USD</MenuItem>
-              <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={"usd"}>USD</MenuItem>
+              <MenuItem value={"inr"}>INR</MenuItem>
             </Select>
           </Toolbar>
         </Container>

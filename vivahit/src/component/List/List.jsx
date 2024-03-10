@@ -3,23 +3,29 @@ import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import { Crypto } from "../../context/CryptoContext";
     import "./List.css"
+import { Tooltip } from "@mui/material";
+import { convertNumber } from "../function/ConvertNumber";
 export const List = ({ coin }) => {
   const { symbol } = useContext(Crypto);
  
   return (
     <tr className="list-row">
-      <td className="td-img">
+        <Tooltip title="Coin Logo"   placement="bottom-start">
+        <td className="td-img">
         <img src={coin.image} alt="coin-logo" className="coin-logo coin-image-td" />
         </td>
-          <td className="td-info">
+        </Tooltip>
+      <Tooltip title="Coin Info"   placement="bottom-end">
+      <td className="td-info">
           <div className="name-col info-flex">
           <p className="coin-symbol">{coin.symbol}</p>
           <p className="coin-name">{coin.name}</p>
         </div>
           </td>
-        
-      
-      {coin.price_change_percentage_24h > 0 ? (
+      </Tooltip>
+         
+        <Tooltip    title="Coin Price Percentage In 24hrs"   placement="bottom-start">
+        {coin.price_change_percentage_24h > 0 ? (
         <td className="chip-flex">
           <div className="price-chip">
             {coin.price_change_percentage_24h.toFixed(2)}%
@@ -38,7 +44,9 @@ export const List = ({ coin }) => {
           </div>
         </td>
       )}
-      <td >
+        </Tooltip>
+        <Tooltip title="Coin Price In USD"   placement="bottom-start">
+        <td >
         <h3
           className="coin-price td-current-price"
           style={{
@@ -49,17 +57,25 @@ export const List = ({ coin }) => {
           }}
         >{`${symbol}${coin.current_price.toLocaleString()}`}</h3>
       </td>
+        </Tooltip>
+      
+      <Tooltip title="Market Cap"   placement="bottom-start">
       <td>
         <p className="total-volume">
-         {coin.market_cap.toLocaleString()}
+         { convertNumber(coin.market_cap)}
         </p>
       </td>
-      <td>
+      </Tooltip>
+        
+     <Tooltip title="Total Volume"   placement="bottom-start">
+     <td>
         {" "}
         <p className="total-volume">
-          {coin.total_volume.toLocaleString()}
+          {  convertNumber(coin.total_volume)}
         </p>
       </td>
+     </Tooltip>
+     
     </tr>
   );
 };
