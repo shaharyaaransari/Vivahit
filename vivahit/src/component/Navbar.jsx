@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { AppBar, Toolbar, Typography, Container, Select, MenuItem, createTheme, ThemeProvider } from '@mui/material';
+import { AppBar, Toolbar, Typography, Container, Select, MenuItem,  ThemeProvider } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { Crypto } from '../context/CryptoContext';
-
+import { createTheme } from '@mui/material/styles';
 const Navbar = () => {
   const navigate = useNavigate();
   const { setCurrency, currency } = useContext(Crypto);
