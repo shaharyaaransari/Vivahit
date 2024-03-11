@@ -1,3 +1,4 @@
+![Screenshot (365)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/de936aae-0348-45ed-bf3d-fafb8560a919)
 # Vivahit
   ## Deployed Link :
     https://vivahit.vercel.app/
@@ -32,5 +33,18 @@ The application is responsive and can adapt to different screen sizes, including
 6. Context API: Used for state management and sharing data across components.
 7. CSS: Custom CSS styles for enhancing the visual presentation of components.
 
- ## Over Veiw of Website
- 
+ ## Over View of Website
+ ![Screenshot (365)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/aaea7b8e-5e2e-4699-996e-a8820f5e7165)
+ ![Screenshot (366)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/deecdae4-ca44-4848-8dfa-dc59e4c6a70c)
+ ![Screenshot (367)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/fdac8bb2-cc7b-4759-9e66-a140dd32fe58)
+ ![Screenshot (368)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/a10e024f-3a5f-4159-adac-0ca6bd7c5a3e)
+![Screenshot (370)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/6d51836d-690f-48ae-8e43-5123e69e7543)
+![Screenshot (371)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/c088591f-54c0-44c1-800e-78af482fef2e)
+![Screenshot (372)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/1a311ddb-8b72-416f-9b23-b8c8775f1e4c)
+![Screenshot (373)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/099a90cf-3686-412b-8b8f-049c26a7ccac)
+
+
+
+
+
+
