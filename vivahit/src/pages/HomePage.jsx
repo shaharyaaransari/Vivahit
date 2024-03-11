@@ -21,7 +21,7 @@ const [laoding,setLoading] = useState(true)
       .then((res) => {
       
         setCoins(res.data);
-          console.log(res.data)
+         
         setPaginatedCoins(res.data.slice(0, 10));
           setLoading(false)
       })
@@ -29,7 +29,7 @@ const [laoding,setLoading] = useState(true)
            setLoading(false)
         console.log(err);
       });
-  }, []);
+  }, [currency]);
   const handleChange = (e) => {
     setSearch(e.target.value);
    

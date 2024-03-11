@@ -9,7 +9,8 @@ import { getCoinData } from "../component/function/GetData";
 import { Crypto } from "../context/CryptoContext";
 import { getCoinPrice } from "../component/function/getCoinPriceData";
 import LineChart from "../component/LineChart/LineChart";
-import { gettingDate } from "../component/function/GetDate";
+import { gettingDate } from "../component/function/GetConvertDate";
+import SelectDays from "../component/Coin/SelectDays/SelectDays";
 
 export const CoinPage = () => {
   const { id } = useParams();
@@ -22,7 +23,7 @@ export const CoinPage = () => {
     if (id) {
       getData();
     }
-  }, [id]);
+  }, [id,days,currency]);
   async function getData() {
     const coinData = await getCoinData(id);
     if (coinData) {
@@ -47,6 +48,15 @@ export const CoinPage = () => {
       setLoading(false);
     }
   }
+  const handleDaysChange = async (event) => {
+    setLoading(true);
+    setDays(event.target.value);
+    const prices = await getPrices(id, event.target.value, priceType, setError);
+    if (prices) {
+      settingChartData(setChartData, prices);
+      setLoading(false);
+    }
+  };
   return (
     <>
       {loading ? (
@@ -57,6 +67,7 @@ export const CoinPage = () => {
         </div>
       )}
         {!loading &&  <div className="grey-wrapper">
+           <SelectDays handleDaysChange={handleDaysChange} days={days} />
         <LineChart chartData={chartData}/>
       </div>}
      
