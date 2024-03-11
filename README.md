@@ -33,6 +33,14 @@ The application is responsive and can adapt to different screen sizes, including
 6. Context API: Used for state management and sharing data across components.
 7. CSS: Custom CSS styles for enhancing the visual presentation of components.
 
+
+  ## How to Run
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using npm install.
+4. Start the development server using npm run dev.
+5. Access the application in your web browser at http://127.0.0.1:5173/.
+
  ## Over View of Website
  ![Screenshot (365)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/aaea7b8e-5e2e-4699-996e-a8820f5e7165)
  ![Screenshot (366)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/deecdae4-ca44-4848-8dfa-dc59e4c6a70c)
