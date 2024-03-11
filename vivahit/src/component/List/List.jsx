@@ -5,14 +5,16 @@ import { Crypto } from "../../context/CryptoContext";
     import "./List.css"
 import { Tooltip } from "@mui/material";
 import { convertNumber } from "../function/ConvertNumber";
+import { Link } from "react-router-dom";
 export const List = ({ coin }) => {
   const { symbol } = useContext(Crypto);
  
   return (
-    <tr className="list-row">
+    <Link to={`/coins/${coin.id}`}>
+ <tr className="list-row">
         <Tooltip title="Coin Logo"   placement="bottom-start">
         <td className="td-img">
-        <img src={coin.image} alt="coin-logo" className="coin-logo coin-image-td" />
+        <img src={coin?.image} alt="coin-logo" className="coin-logo coin-image-td" />
         </td>
         </Tooltip>
       <Tooltip title="Coin Info"   placement="bottom-end">
@@ -77,5 +79,7 @@ export const List = ({ coin }) => {
      </Tooltip>
      
     </tr>
+    </Link>
+   
   );
 };

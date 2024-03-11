@@ -37,7 +37,14 @@ body {
 
   overflow-x: hidden;
 }
-
+ .grey-wrapper{
+    background-color: var(--darkgrey);
+      margin: 1.5rem ;
+        width: 90%;
+          display: block;
+          padding:1rem 0.5rem;
+        border-radius: 0.8rem;
+ }
 h1,
 h2,
 h3,

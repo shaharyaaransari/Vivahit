@@ -4,11 +4,14 @@ import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
   
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import { Crypto } from "../../context/CryptoContext";
+import { Link } from "react-router-dom";
 export const Grid = ({ coin }) => {
   const {  currency,symbol } = useContext(Crypto);
   
   return (
-    <div className={`grid-container ${coin.price_change_percentage_24h <0&& "grid-container-red"}`}>
+    <Link to={`/coins/${coin.id}`}>
+
+<div className={`grid-container ${coin.price_change_percentage_24h <0&& "grid-container-red"}`}>
       <div className="info-flex">
         <img src={coin.image} alt="coin-logo" className="coin-logo" />
         <div className="name-col">
@@ -34,5 +37,7 @@ export const Grid = ({ coin }) => {
          <p className="total-volume">Market Cap : {coin.market_cap.toLocaleString()}</p>
          <p className="total-volume">Total Volume : {coin.total_volume.toLocaleString()}</p>
     </div>
+    </Link>
+    
   );
 };

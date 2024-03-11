@@ -4,6 +4,7 @@ import axios from "axios";
 import { Crypto } from "../context/CryptoContext";
 import Search from "../component/Search/Search";
 import PaginationComponent from "../component/Pagination/Pagination";
+import { Spinner } from "../component/Spinner/Spinner";
 
 export default function HomePage() {
   const [coins, setCoins] = useState([]);
@@ -11,7 +12,7 @@ export default function HomePage() {
   const { currency } = useContext(Crypto);
   const [page, setPage] = useState(1);
   const [paginatedCoins, setPaginatedCoins] = useState([]);
-
+const [laoding,setLoading] = useState(true)
   useEffect(() => {
     axios
       .get(
@@ -20,9 +21,12 @@ export default function HomePage() {
       .then((res) => {
       
         setCoins(res.data);
+          console.log(res.data)
         setPaginatedCoins(res.data.slice(0, 10));
+          setLoading(false)
       })
       .catch((err) => {
+           setLoading(false)
         console.log(err);
       });
   }, []);
@@ -40,13 +44,15 @@ export default function HomePage() {
     // Value = new page number
     var initialCount = (value - 1) * 10;
     setPaginatedCoins(coins.slice(initialCount, initialCount + 10));
+      
   };
 
   return (
     <div>
         <Search search={search} handleChange={handleChange}/>
-      <TabsComponent    coins={search ? filteredCoins : paginatedCoins}/>
-      {!search && (
+          {laoding ?<Spinner/>:<TabsComponent    coins={search ? filteredCoins : paginatedCoins}/>}
+      
+      {!search && !laoding &&(
             <PaginationComponent
               page={page}
               handlePageChange={handlePageChange}
