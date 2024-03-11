@@ -1,4 +1,4 @@
-![Screenshot (365)](https://github.com/shaharyaaransari/Vivahit/assets/113225294/de936aae-0348-45ed-bf3d-fafb8560a919)
+
 # Vivahit
   ## Deployed Link :
     https://vivahit.vercel.app/
